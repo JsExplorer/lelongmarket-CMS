@@ -16,6 +16,8 @@ import { Separator } from "@/components/ui/separator";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { AlertModal } from "@/components/modals/alert-modal";
+import { ApiAlert } from "@/components/ui/api-alert";
+import { useOrigin } from "@/hooks/use-origin";
 
 interface SettingsFormProps {
     initialData: Store;
@@ -32,6 +34,7 @@ const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const router = useRouter();
+    const origin = useOrigin();
 
     const form = useForm<SettingsFormValues>({
         resolver: zodResolver(formSchema),
@@ -106,11 +109,13 @@ const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
                         )}
                         />
                     </div>
-                    <Button disabled={loading} type="submit">
+                    <Button disabled={loading} type="submit" className="">
                         Save changes
                     </Button>
                 </form>
             </Form>
+            <Separator className="mt-2"/>
+            <ApiAlert title="NEXT_API_URL" description={`${origin}/api/${params.storeId}`} variant="public"/> 
         </> 
      );
 }
