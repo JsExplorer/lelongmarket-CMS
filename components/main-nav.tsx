@@ -15,7 +15,12 @@ export function MainNav({
     {
         href: `/${params.storeId}`,
         label: 'Store Overview',
-        active: pathname === `/${params.storeId}`,
+        active: pathname === `/${params.storeId}`, // toggle "active name" when user is @ the specific URL
+    },
+    {
+        href: `/${params.storeId}/billboards`,
+        label: 'Billboards',
+        active: pathname === `/${params.storeId}/billboards`,
     },
     {
         href: `/${params.storeId}/settings`,
