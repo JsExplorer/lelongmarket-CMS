@@ -70,7 +70,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
     } : {
       name: '',
       images: [],
-      price: '',
+      price: 0,
       categoryId: '',
       sizeId: '',
       isSelling: false,
