@@ -26,7 +26,7 @@ import { ArrowBigLeft, ArrowBigRight } from "lucide-react"
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[],
-  searchKey: string;
+  filterKey: string;
 }
 
 export function DataTable<TData, TValue>({
