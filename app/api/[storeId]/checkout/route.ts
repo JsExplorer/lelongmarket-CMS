@@ -71,8 +71,8 @@ export async function POST (
         phone_number_collection: {
             enabled: true
         },
-        success_url: `${process.env.FRONTEND_STORE_URL}/cart?success=88`, // trigger the searchParams at frontend for "success" toast message
-        cancel_url: `${process.env.FRONTEND_STORE_URL}/cart?canceled=88`, // trigger the "cancel" toast message
+        success_url: `${process.env.FRONTEND_STORE_URL}/cart?success=888`, // trigger the searchParams at frontend for "success" toast message
+        cancel_url: `${process.env.FRONTEND_STORE_URL}/cart?cancelled=888`, // trigger the "cancel" toast message
         metadata: {
             orderId: order.id
         }
