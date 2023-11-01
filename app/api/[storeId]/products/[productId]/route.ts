@@ -79,7 +79,7 @@ export async function PATCH(
 
     const body = await req.json();
 
-    const { name, price, categoryId, images, sizeId, isSelling, isArchived } = body;
+    const { name, price, categoryId, images, sizeId, isFeatured, isArchived } = body;
 
     if (!userId) {
       return new NextResponse("Unauthenticated", { status: 403 });
@@ -132,7 +132,7 @@ export async function PATCH(
         images: {
           deleteMany: {},
         },
-        isSelling,
+        isFeatured,
         isArchived,
       },
     });

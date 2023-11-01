@@ -75,7 +75,7 @@ model Product {
   size Size @relation(fields: [sizeId], references: [id])
   name String
   price Decimal
-  isSelling Boolean @default(false)
+  isFeatured Boolean @default(false)
   isArchived Boolean @default(false)
   images Image[]
   orderItems OrderItem[]
