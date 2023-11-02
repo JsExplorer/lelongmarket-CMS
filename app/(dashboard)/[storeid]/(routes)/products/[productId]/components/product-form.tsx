@@ -246,7 +246,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                   </FormControl>
                   <div className="space-y-1 leading-none">
                     <FormLabel>
-                      Selling
+                      Featured
                     </FormLabel>
                     <FormDescription>
                       Product will appear on the home page when checked
